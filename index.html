@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Password Generator</h1>
+      <!-- Result Displayer -->
+      <div class="display-container">
+        <input placeholder="Password" readonly data-passwordDisplayer />
+        <button class="copy" data-copy>
+          <span class="tooltip" data-copyMsg></span>
+          <img src="copy.svg" alt="" height="23" width="23" class="copyIcon">
+        </button>
+      </div>
+      <div class="input-container">
+        <!-- Password Length Section -->
+        <div class="lengthMsg">
+          <p>Password Length</p>
+          <p data-lengthNumber>0</p>
+        </div>
+        <!-- Slider -->
+        <input type="range" min="1" max="20" step="1" data-lengthSlider class="slider"/>
+        <!-- Checkboxes -->
+        <div class="check">
+          <input type="checkbox" id="uppercase" checked />
+          <label for="uppercase">Includes Uppercase Letters</label>
+        </div>
+        <div class="check">
+          <input type="checkbox" id="lowercase" />
+          <label for="lowercase">Includes Lowercase Letters</label>
+        </div>
+        <div class="check">
+          <input type="checkbox" id="numbers" />
+          <label for="numbers">Includes Numbers</label>
+        </div>
+        <div class="check">
+          <input type="checkbox" id="symbols" />
+          <label for="symbols">Includes Symbols</label>
+        </div>
+        <!-- Strength-section -->
+        <div class="strength-container">
+          <p>Strength</p>
+          <div class="indicator" data-passwordIndicator></div>
+        </div>
+        <!-- Generate-Button -->
+        <button class="generateBtn">Generate Password</button>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/ccd62b7780.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
